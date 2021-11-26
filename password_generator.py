@@ -1,6 +1,5 @@
 import numpy as np
 from string import ascii_lowercase, ascii_uppercase, punctuation
-import argparse
 
 letters_small = list(ascii_lowercase)
 letters_capital = list(ascii_uppercase)
@@ -63,12 +62,4 @@ def generate_password(length: int = 15, nice_password: bool = False) -> str:
 
 
 if __name__ == "__main__":
-    # Initialize parser
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-len", "--Length", help = "Length of password", type = int, metavar = "N")
-    
-    args = parser.parse_args()
-    if args.Length:
-        print(generate_password(args.Length, nice_password = False))
-    else:
-        print("Password not generated.")
+    print(generate_password(15, nice_password = False))
