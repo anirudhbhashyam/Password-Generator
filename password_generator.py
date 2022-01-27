@@ -8,19 +8,19 @@ digits = list(map(lambda x: str(x), range(10)))
 
 def generate_password(length: int = 15, nice_password: bool = False) -> str:
     """
-    Generates passwords that consist of a 
-    random selection of letters (upper and
-    lower case), digits and 
-    special characters.
+    Generates passwords that consist of a random selection of letters (upper and lower case), digits and special characters.
 
     Parameters
-    ______
-    length: character length of password to be generated.
-    nice: Letters and numbers have a higher weightage
+    ----------
+    length: 
+        Character length of password to be generated.
+    nice_password: 
+        Letters and numbers have a higher weightage
 
     Returns
-    ______
-    A string as the password.
+    -------
+    str:
+        The password.
     """
     
     # Random percentages for each type of character.
