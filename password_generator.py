@@ -1,3 +1,5 @@
+import argparse
+
 import numpy as np
 from string import ascii_lowercase, ascii_uppercase, punctuation
 
@@ -55,11 +57,19 @@ def generate_password(length: int = 15, nice_password: bool = False) -> str:
 
     # Shuffle and reverse master password array 100 times.
     for _ in range(100):
-        password = password[ ::-1]
+        password = password[:: -1]
         np.random.default_rng().shuffle(password)
     
-    return "".join([str(item) for item in password.astype(str)])
+    return "".join([str(char) for char in password])
 
 
 if __name__ == "__main__":
-    print(generate_password(15, nice_password = False))
+    # Initialize parser
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-len", "--Length", help = "Length of password", type = int, metavar = "N")
+    
+    args = parser.parse_args()
+    if args.Length:
+        print(generate_password(args.Length, nice_password = False))
+    else:
+        print("Password not generated.")
