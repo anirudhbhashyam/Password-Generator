@@ -62,7 +62,7 @@ def generate_password(length: int = 16, nice_password: bool = False) -> str:
     return "".join([str(char) for char in password])
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-l", "--length", help = "Length of password", type = int, metavar = "N")
     
@@ -71,3 +71,7 @@ if __name__ == "__main__":
         print(generate_password(args.length))
     else:
         print("Usage: python password-genrator -l <length>")
+    
+
+if __name__ == "__main__":
+    main()    
