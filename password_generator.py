@@ -8,7 +8,7 @@ letters_capital = list(ascii_uppercase)
 special_chars = list(punctuation)
 digits = list(map(lambda x: str(x), range(10)))
 
-def generate_password(length: int = 15, nice_password: bool = False) -> str:
+def generate_password(length: int = 16, nice_password: bool = False) -> str:
     """
     Generates passwords that consist of a random selection of letters (upper and lower case), digits and special characters.
 
@@ -17,7 +17,7 @@ def generate_password(length: int = 15, nice_password: bool = False) -> str:
     length: 
         Character length of password to be generated.
     nice_password: 
-        Letters and numbers have a higher weightage
+        Letters and numbers have a higher weightage.
 
     Returns
     -------
@@ -42,7 +42,6 @@ def generate_password(length: int = 15, nice_password: bool = False) -> str:
         number_of_special_chars = int(ratios[2] * length)
         number_of_digits = int(ratios[3] * length)
 
-
     # Select random characters of each type with given ratio.
     lowercase_letters = np.random.default_rng().choice(letters_small, number_of_lowercase_letters)
     uppercase_letters =  np.random.default_rng().choice(letters_capital, number_of_uppercase_letters)
@@ -64,12 +63,11 @@ def generate_password(length: int = 15, nice_password: bool = False) -> str:
 
 
 if __name__ == "__main__":
-    # Initialize parser
     parser = argparse.ArgumentParser()
-    parser.add_argument("-len", "--Length", help = "Length of password", type = int, metavar = "N")
+    parser.add_argument("-l", "--length", help = "Length of password", type = int, metavar = "N")
     
     args = parser.parse_args()
-    if args.Length:
-        print(generate_password(args.Length, nice_password = False))
+    if args.length:
+        print(generate_password(args.length))
     else:
-        print("Password not generated.")
+        print("Usage: python password-genrator -l <length>")
