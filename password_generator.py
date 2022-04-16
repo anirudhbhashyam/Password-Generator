@@ -64,7 +64,7 @@ def generate_password(length: int = 16, nice_password: bool = False) -> str:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-l", "--length", help = "Length of password", type = int, metavar = "N")
+    parser.add_argument("-l", "--length", help = "Length of password", type = int, metavar = "N", required = True)
     
     args = parser.parse_args()
     if args.length:
