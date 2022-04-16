@@ -6,7 +6,7 @@ from string import ascii_lowercase, ascii_uppercase, punctuation
 letters_small = list(ascii_lowercase)
 letters_capital = list(ascii_uppercase)
 special_chars = list(punctuation)
-digits = list(map(lambda x: str(x), range(10)))
+digits = list(str(x) for x in range(10))
 
 def generate_password(length: int = 16, nice_password: bool = False) -> str:
     """
