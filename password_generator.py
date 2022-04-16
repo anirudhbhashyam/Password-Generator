@@ -70,7 +70,7 @@ def main():
     if args.length:
         print(generate_password(args.length))
     else:
-        print("Usage: python password-genrator.py -l <length>")
+        print("Usage: python password-generator.py -l <length>")
     
 
 if __name__ == "__main__":
