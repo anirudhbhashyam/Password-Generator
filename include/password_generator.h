@@ -21,7 +21,7 @@ void shuffle(char* character_array, const size_t length)
 	}
 }
 
-char* generate_password(char* buffer, const size_t length)
+void generate_password(char* buffer, const size_t length)
 {
 	int i;
 	// Account for the null terminating character.
@@ -31,7 +31,6 @@ char* generate_password(char* buffer, const size_t length)
 		shuffle(MASTER_CHARACTERS, (N_LETTERS + N_DIGITS + N_SYMBOLS));
 		*(buffer + i) = MASTER_CHARACTERS[rand() % (N_LETTERS + N_DIGITS + N_SYMBOLS)];
 	}
-	return buffer;
 }
 
 
