@@ -1,7 +1,20 @@
 # Password-Generator
-
-A simple password generator developed in Python. 
+A simple password generator developed in Python and C. 
 
 
 # Usage
-```python password_generator.py -len <character_length>```
+
+```
+git clone --recursive https://github.com/anirudhbhashyam/Password-Generator
+cd Password-Generator
+```
+### Python 
+```
+python password_generator.py -len <password_length>
+```
+
+### C
+```
+make
+./password_generator <password_length>
+```
