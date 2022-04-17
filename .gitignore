@@ -1,0 +1,6 @@
+# OBJECT FILES.
+obj
+*.o
+# Executables
+password_generator
+app

@@ -1,12 +1,17 @@
 import argparse
 
 import numpy as np
-from string import ascii_lowercase, ascii_uppercase, punctuation
+# from string import ascii_lowercase, ascii_uppercase, punctuation
 
-letters_small = list(ascii_lowercase)
-letters_capital = list(ascii_uppercase)
-special_chars = list(punctuation)
-digits = list(str(x) for x in range(10))
+letters_small = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+# letters_small = list(ascii_lowercase)
+letters_capital = [char.upper() for char in letters_small]
+# letters_capital = list(ascii_uppercase)
+special_chars = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "~", "`", ";", ":", "'", "\"", ",", "<", ".", ">", "/", "?"]
+print(len(special_chars))
+# special_chars = list(punctuation)
+digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+# digits = list(str(x) for x in range(10))
 
 def generate_password(length: int = 16, nice_password: bool = False) -> str:
     """
