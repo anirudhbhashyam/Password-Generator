@@ -10,7 +10,7 @@ cd Password-Generator
 ```
 ### Python 
 ```
-python password_generator.py -len <password_length>
+python password_generator.py -l <password_length>
 ```
 
 ### C
