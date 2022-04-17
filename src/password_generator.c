@@ -9,8 +9,8 @@ int main(int argc, char** argv)
 	}
 
 	srand(time(0));
-	char* password = generate_password(atoi(argv[1]));
-	// char* password = generate_password(16);
+	char* password = (char*) malloc(sizeof(char) * (atoi(argv[1]) + 1));
+	generate_password(password, atoi(argv[1]));
 	printf("%s\n", password);
 	free(password);
 	return 0;

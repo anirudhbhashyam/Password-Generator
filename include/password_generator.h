@@ -21,18 +21,17 @@ void shuffle(char* character_array, const size_t length)
 	}
 }
 
-char* generate_password(const size_t length)
+char* generate_password(char* buffer, const size_t length)
 {
 	int i;
 	// Account for the null terminating character.
-	char* password = (char*) malloc(sizeof(char) * (length + 1));
 	for (i = 0; i < length + 1; i++)
 	{
 		// Shuffle the character array.
 		shuffle(MASTER_CHARACTERS, (N_LETTERS + N_DIGITS + N_SYMBOLS));
-		*(password + i) = MASTER_CHARACTERS[rand() % (N_LETTERS + N_DIGITS + N_SYMBOLS)];
+		*(buffer + i) = MASTER_CHARACTERS[rand() % (N_LETTERS + N_DIGITS + N_SYMBOLS)];
 	}
-	return password;
+	return buffer;
 }
 
 
