@@ -87,6 +87,18 @@ body {
     text-align: center;
 }
 
+.password-size {
+    position: absolute;
+	bottom: 200%;
+}
+
+.password-size-text {
+	display: flex;
+	color: rgb(255, 186, 82);
+	margin: 0 0 -24px 0;
+    font-weight: 600;
+}
+
 .password-data {
 	display: flex;
 	color: #fff;
