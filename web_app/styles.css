@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1D1F20;
+}
+
+.navbar {
+	background: #1D1F20;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+	-moz-box-shadow:    3px 3px 10px 6px #002638;
+	-webkit-box-shadow: 3px 3px 10px 6px #002638;
+	box-shadow:         3px 3px 10px 6px #002638;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+.navbar-title {
+	color: rgb(0, 183, 255);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbar-links {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+.navbar-item {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+}
+
+.navbar-link {
+	display: flex;
+    color: rgb(0, 183, 255);
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+}
+
+.password-container {
+	margin: 0 0 0 -250px;
+    position: absolute;
+    background-color:rgb(0, 0, 0);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+	padding: 0px;
+    content: flex;
+    border-radius: 4px;
+    width: 500px;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.password-data {
+	display: flex;
+	color: #fff;
+	margin: 0 0 24px 0;
+    font-weight: bold;
+}
+
+.password-text {
+    text-align: center;
+    font-size: 20px;
+}
+
+.password-button {
+	position: absolute;
+	top: 200%;
+}
+
+.btn.btn.hero {
+    background: transparent;
+    background-color: rgb(0, 183, 255);
+    border-radius: 4px;
+    padding: 10px;
+    border: 2px solid;
+    font-weight: bold;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.btn.btn.hero:hover {
+    background-color: #000;
+    color: #fff;
+}
